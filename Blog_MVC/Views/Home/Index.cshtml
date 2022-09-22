@@ -1,0 +1,31 @@
+﻿@model List<Post>
+
+@{
+    ViewData["Title"] = "Home Page";
+    var i = new int []{1,2,3,4};
+}
+<div class="pageName">Home Page</div>
+
+@*@Model.Title*@
+
+@*@foreach(var item in i){
+    <div class="PostItem">Post Number @item</div>
+}*@
+
+@foreach(var item in Model){
+    <div class="PostItem">
+
+        <div>
+            @*<span>@item.Id</span>*@
+            <span class="postTitle">@item.Title</span>
+            <span class="postDate">@item.RegisterDate</span>
+        </div>
+        <div>@item.Content</div>
+  
+    </div>
+}
+@*@for(int i = 1; i<5; i++)
+{
+    <div class="PostItem">Post Number @i</div>
+}*@
+
